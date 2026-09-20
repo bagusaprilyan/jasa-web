@@ -2,7 +2,7 @@
    GANTI nomor WA di bawah ini dengan nomor Bos (format 62, tanpa + / 0 depan).
    Contoh: 6281234567890
 */
-const WA_NUMBER = '6281234567890'; // ← GANTI INI
+const WA_NUMBER = '6285647376259';
 const WA_TEXT_DEFAULT = 'Halo, saya mau tanya-tanya soal jasa bikin website untuk usaha saya.';
 
 /* ============ Helper WA ============ */
