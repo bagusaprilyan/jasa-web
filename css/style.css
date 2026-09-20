@@ -138,8 +138,13 @@ h1, h2, h3, h4 { color: var(--dark); line-height: 1.2; font-weight: 800; }
 
 /* ============ PORTFOLIO ============ */
 .portfolio { background: #fff; }
-.pf-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; transition: all .25s; }
+.pf-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; transition: all .25s; display: block; }
 .pf-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+a.pf-card { cursor: pointer; border-color: var(--primary); }
+a.pf-card:hover { border-color: var(--primary-d); }
+.pf-live { font-size: .7rem; font-weight: 800; color: #fff; background: var(--primary); padding: .2rem .6rem; border-radius: 999px; vertical-align: middle; margin-left: .3rem; white-space: nowrap; }
+.pf-off { opacity: .62; }
+.pf-off:hover { transform: none; box-shadow: none; }
 .pf-thumb { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 3.4rem; }
 .pf-1 { background: linear-gradient(135deg,#fef3c7,#fde68a); }
 .pf-2 { background: linear-gradient(135deg,#dbeafe,#bfdbfe); }

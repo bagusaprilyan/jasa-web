@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo — Barbershop Keren | WebKu</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#0ea5e9;--pd:#0284c7;--dark:#0c1322;--line:#e2e8f0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#334155;line-height:1.6;background:#f8fafc}
+a{text-decoration:none;color:inherit}
+.demo-bar{background:var(--dark);color:#fff;padding:.7rem 1rem;text-align:center;font-size:.85rem;position:sticky;top:0;z-index:50}
+.demo-bar b{color:#38bdf8}
+.demo-bar a{background:#38bdf8;color:#0c1322;padding:.35rem 1rem;border-radius:999px;font-weight:700;margin-left:.6rem;display:inline-block;margin-top:.3rem}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+header{background:linear-gradient(160deg,#0c1322,#1e293b);color:#fff;padding:3rem 0;text-align:center}
+header .logo{font-size:2rem;font-weight:800}
+header .logo span{color:#38bdf8}
+header p{color:#94a3b8;margin-top:.4rem}
+.jam{margin-top:1rem;font-size:.9rem;color:#38bdf8;font-weight:700}
+section{padding:2.5rem 0}
+h2{color:var(--dark);font-size:1.4rem;text-align:center;margin-bottom:1.5rem}
+.layanan{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.lay{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3rem;text-align:center;transition:.2s}
+.lay:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(14,165,233,.14);border-color:#bae6fd}
+.lay .ico{font-size:2.2rem}
+.lay h3{color:var(--dark);margin:.6rem 0 .3rem;font-size:1.05rem}
+.lay .h{color:var(--p);font-weight:800}
+.booking{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.8rem;max-width:560px;margin:0 auto;box-shadow:0 10px 34px rgba(0,0,0,.05)}
+.booking label{display:block;font-weight:700;font-size:.88rem;color:var(--dark);margin-bottom:1rem}
+.booking select,.booking input{width:100%;margin-top:.4rem;padding:.8rem;border:2px solid var(--line);border-radius:10px;font-family:inherit;font-size:.92rem}
+.booking select:focus,.booking input:focus{outline:none;border-color:var(--p)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:.5rem;margin-top:.4rem}
+.slot{padding:.55rem;border:2px solid var(--line);border-radius:9px;text-align:center;font-size:.82rem;font-weight:600;cursor:pointer;transition:.15s;background:#fff}
+.slot:hover{border-color:var(--p)}
+.slot.aktif{background:var(--p);color:#fff;border-color:var(--p)}
+.slot.penuh{background:#f1f5f9;color:#cbd5e1;cursor:not-allowed;text-decoration:line-through}
+.btn{background:var(--p);color:#fff;border:none;padding:.9rem;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit;width:100%;margin-top:1.3rem;transition:.2s}
+.btn:hover{background:#0284c7}
+.btn:disabled{background:#cbd5e1;cursor:not-allowed}
+.sukses{text-align:center;padding:1.5rem}
+.sukses .big{font-size:3rem}
+footer{background:var(--dark);color:#94a3b8;text-align:center;padding:2rem 1rem;font-size:.82rem}
+footer a{color:#38bdf8}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  🔍 <b>Ini contoh (demo)</b> — website + booking online, pelanggan pesan jadwal sendiri.
+  <a href="../index.html#portfolio">← Kembali ke WebKu</a>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">💈 Barber<span>shop</span> Keren</div>
+    <p>Potong rapi, gaya kekinian, harga bersahabat</p>
+    <div class="jam">🕐 Buka tiap hari 09.00 – 21.00 · Jl. Merdeka No. 45</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Layanan Kami</h2>
+    <div class="layanan">
+      <div class="lay"><div class="ico">✂️</div><h3>Potong Rambut</h3><div class="h">Rp 35.000</div></div>
+      <div class="lay"><div class="ico">🧔</div><h3>Potong + Cukur</h3><div class="h">Rp 50.000</div></div>
+      <div class="lay"><div class="ico">💆</div><h3>Cuci + Pijat</h3><div class="h">Rp 25.000</div></div>
+      <div class="lay"><div class="ico">🎨</div><h3>Hair Coloring</h3><div class="h">Rp 120.000</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Booking Jadwal Online</h2>
+    <div class="booking" id="bookingBox">
+      <label>Pilih Layanan
+        <select id="layanan">
+          <option>Potong Rambut — Rp 35.000</option>
+          <option>Potong + Cukur — Rp 50.000</option>
+          <option>Cuci + Pijat — Rp 25.000</option>
+          <option>Hair Coloring — Rp 120.000</option>
+        </select>
+      </label>
+      <label>Pilih Tanggal
+        <input type="date" id="tanggal">
+      </label>
+      <label>Pilih Jam
+        <div class="slots" id="slots"></div>
+      </label>
+      <label>Nama Anda
+        <input type="text" id="nama" placeholder="Nama lengkap">
+      </label>
+      <button class="btn" id="btnBook" disabled onclick="booking()">Konfirmasi Booking 💬</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Barbershop Keren · Demo oleh WebKu<br>
+  <a href="../index.html">Bikin website seperti ini →</a>
+</footer>
+
+<script>
+const WA = '6285647376259';
+const JAM = ['09:00','10:00','11:00','13:00','14:00','15:00','16:00','17:00','19:00','20:00'];
+const PENUH = ['11:00','16:00']; // contoh jam yg sudah terisi
+let pilih = null;
+
+// tanggal default = besok
+const tgl = document.getElementById('tanggal');
+const besok = new Date(Date.now()+86400000).toISOString().split('T')[0];
+tgl.value = besok; tgl.min = new Date().toISOString().split('T')[0];
+
+function renderSlots(){
+  document.getElementById('slots').innerHTML = JAM.map(j=>{
+    const penuh = PENUH.includes(j);
+    return `<div class="slot ${penuh?'penuh':''} ${pilih===j?'aktif':''}" ${penuh?'':`onclick="pilihJam('${j}')"`}>${j}</div>`;
+  }).join('');
+}
+function pilihJam(j){ pilih = j; renderSlots(); cek(); }
+function cek(){
+  const ok = pilih && document.getElementById('nama').value.trim();
+  document.getElementById('btnBook').disabled = !ok;
+}
+document.getElementById('nama').addEventListener('input', cek);
+
+function booking(){
+  const layanan = document.getElementById('layanan').value;
+  const tanggal = document.getElementById('tanggal').value;
+  const nama = document.getElementById('nama').value.trim();
+  const tglID = new Date(tanggal).toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const teks =
+`Halo Barbershop Keren! Saya mau booking 💈
+
+*Layanan:* ${layanan}
+*Tanggal:* ${tglID}
+*Jam:* ${pilih}
+*Nama:* ${nama}
+
+Mohon dikonfirmasi ya. Terima kasih!`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(teks)}`,'_blank');
+  document.getElementById('bookingBox').innerHTML =
+    `<div class="sukses"><div class="big">✅</div><h3>Booking Dikirim!</h3>
+     <p>WhatsApp terbuka dengan detail booking Anda.<br>Admin akan konfirmasi segera.</p></div>`;
+}
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+renderSlots();
+</script>
+</body>
+</html>

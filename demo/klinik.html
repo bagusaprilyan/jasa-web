@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo — Klinik Sehat Bersama | WebKu</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#10b981;--pd:#059669;--dark:#064e3b;--line:#e2e8f0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#334155;line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.demo-bar{background:var(--dark);color:#fff;padding:.7rem 1rem;text-align:center;font-size:.85rem;position:sticky;top:0;z-index:50}
+.demo-bar b{color:#6ee7b7}
+.demo-bar a{background:#6ee7b7;color:#064e3b;padding:.35rem 1rem;border-radius:999px;font-weight:700;margin-left:.6rem;display:inline-block;margin-top:.3rem}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:40px;z-index:45}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;color:var(--p);font-size:1.25rem}
+nav .menu{display:flex;gap:1.5rem;font-size:.9rem;font-weight:600}
+nav .menu a:hover{color:var(--p)}
+.hero{background:linear-gradient(160deg,#ecfdf5,#fff);padding:3rem 0;text-align:center}
+.hero h1{color:var(--dark);font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.7rem}
+.hero p{color:#64748b;max-width:36rem;margin:0 auto 1.5rem}
+.badge{display:inline-block;background:#d1fae5;color:#065f46;font-size:.8rem;font-weight:700;padding:.35rem 1rem;border-radius:999px;margin-bottom:1rem}
+.btn{display:inline-block;background:var(--p);color:#fff;padding:.8rem 1.8rem;border-radius:999px;font-weight:700;border:none;cursor:pointer;font-family:inherit;font-size:.95rem}
+.btn:hover{background:var(--pd)}
+section{padding:2.8rem 0}
+h2{color:var(--dark);font-size:1.4rem;text-align:center;margin-bottom:1.6rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.kartu{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.4rem;text-align:center}
+.kartu .ico{font-size:2.2rem}
+.kartu h3{color:var(--dark);margin:.6rem 0 .3rem;font-size:1.05rem}
+.kartu p{font-size:.88rem;color:#64748b}
+.hijau{background:#f0fdf4}
+/* FAQ chatbot */
+.chatbox{max-width:520px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 14px 38px rgba(16,185,129,.1)}
+.chatbox .head{background:var(--p);color:#fff;padding:1rem 1.2rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+.chatbox .head .dot{width:10px;height:10px;background:#bbf7d0;border-radius:50%}
+.chat-body{padding:1.2rem;background:#f8fafc;height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:.7rem}
+.msg{max-width:82%;padding:.65rem .95rem;border-radius:13px;font-size:.88rem;line-height:1.5;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.msg.bot{background:#fff;align-self:flex-start;border-top-left-radius:3px}
+.msg.user{background:var(--p);color:#fff;align-self:flex-end;border-top-right-radius:3px}
+.msg.typing{color:#94a3b8;font-style:italic}
+.quick{padding:.9rem;background:#fff;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.5rem}
+.quick button{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;padding:.5rem .9rem;border-radius:999px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit}
+.quick button:hover{background:var(--p);color:#fff}
+footer{background:var(--dark);color:#a7f3d0;text-align:center;padding:2rem 1rem;font-size:.82rem}
+footer a{color:#6ee7b7}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  🔍 <b>Ini contoh (demo)</b> — company profile + bot WhatsApp jawab pertanyaan otomatis.
+  <a href="../index.html#portfolio">← Kembali ke WebKu</a>
+</div>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">🏥 Klinik Sehat Bersama</div>
+    <div class="menu">
+      <a href="#layanan">Layanan</a>
+      <a href="#bot">Tanya Bot</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="badge">✚ Melayani sejak 2010</span>
+    <h1>Klinik Keluarga Terpercaya</h1>
+    <p>Praktik umum, gigi, KIA, dan laboratorium. Ditangani dokter & perawat berpengalaman.</p>
+    <button class="btn" onclick="document.getElementById('bot').scrollIntoView({behavior:'smooth'})">Tanya Bot Kami 💬</button>
+  </div>
+</div>
+
+<section id="layanan" class="hijau">
+  <div class="wrap">
+    <h2>Layanan Kami</h2>
+    <div class="grid3">
+      <div class="kartu"><div class="ico">🩺</div><h3>Praktik Umum</h3><p>Konsultasi & pengobatan umum, buka tiap hari.</p></div>
+      <div class="kartu"><div class="ico">🦷</div><h3>Poli Gigi</h3><p>Pembersihan karang gigi, tambal, cabut.</p></div>
+      <div class="kartu"><div class="ico">🤰</div><h3>KIA & KB</h3><p>Pemeriksaan ibu hamil, imunisasi anak.</p></div>
+      <div class="kartu"><div class="ico">🔬</div><h3>Laboratorium</h3><p>Cek darah, urine, gula darah, kolesterol.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="bot">
+  <div class="wrap">
+    <h2>Tanya Bot WhatsApp</h2>
+    <p style="text-align:center;color:#64748b;margin-bottom:1.4rem;font-size:.92rem">Coba klik pertanyaan di bawah — ini simulasi bot yang jawab otomatis 24 jam 👇</p>
+    <div class="chatbox">
+      <div class="head"><span class="dot"></span> Bot Klinik Sehat Bersama</div>
+      <div class="chat-body" id="chat"></div>
+      <div class="quick" id="quick"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Klinik Sehat Bersama · Demo oleh WebKu<br>
+  <a href="../index.html">Bikin website seperti ini →</a>
+</footer>
+
+<script>
+const WA = '6285647376259';
+const TANYA = [
+  {q:'Jam buka?', a:'Klinik buka tiap hari:\n• Senin–Sabtu: 08.00–20.00\n• Minggu: 09.00–14.00 🕐'},
+  {q:'Biaya konsultasi?', a:'Konsultasi dokter umum Rp 50.000.\nPoli gigi mulai Rp 75.000.\nPasien BPJS dilayani sesuai ketentuan 💳'},
+  {q:'Alamat?', a:'Jl. Sehat No. 88, dekat Alun-Alun kota.\nPatokan: sebelah Apotek Merah 📍'},
+  {q:'Ada dokter gigi?', a:'Ada! Poli gigi buka Senin, Rabu, Jumat (09.00–15.00).\nDokter: drg. Ratna 🦷'},
+  {q:'Bisa daftar online?', a:'Bisa! Ketik: DAFTAR lalu kirim Nama, tgl lahir, keluhan.\nAdmin akan konfirmasi jadwal ✅'},
+  {q:'Terima BPJS?', a:'Ya, kami melayani pasien BPJS & umum.\nBawa KTP + kartu BPJS saat datang ya 🪪'},
+];
+
+const chat = document.getElementById('chat');
+function bubble(text, cls){
+  const d = document.createElement('div');
+  d.className = 'msg ' + cls;
+  d.innerHTML = text.replace(/\n/g,'<br>');
+  chat.appendChild(d); chat.scrollTop = chat.scrollHeight;
+  return d;
+}
+function tanya(i){
+  const t = TANYA[i];
+  bubble(t.q, 'user');
+  const typing = bubble('sedang mengetik...', 'bot typing');
+  setTimeout(()=>{
+    typing.remove();
+    bubble(t.a, 'bot');
+  }, 700);
+}
+
+// Sapaan awal
+bubble('Halo! Selamat datang di Klinik Sehat Bersama 👋<br>Ada yang bisa kami bantu?', 'bot');
+
+// Tombol pertanyaan
+document.getElementById('quick').innerHTML = TANYA.map((t,i)=>`<button onclick="tanya(${i})">${t.q}</button>`).join('');
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

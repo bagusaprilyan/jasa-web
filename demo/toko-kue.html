@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo — Toko Kue Bu Sari | WebKu</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#d97706;--pd:#b45309;--dark:#1c1917;--soft:#fffbeb;--line:#fde68a}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#44403c;line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.demo-bar{background:var(--dark);color:#fff;padding:.7rem 1rem;text-align:center;font-size:.85rem;position:sticky;top:0;z-index:50}
+.demo-bar b{color:#fbbf24}
+.demo-bar a{background:#fbbf24;color:#1c1917;padding:.35rem 1rem;border-radius:999px;font-weight:700;margin-left:.6rem;display:inline-block;margin-top:.3rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:linear-gradient(160deg,var(--soft),#fff);padding:2.5rem 0;text-align:center;border-bottom:2px dashed var(--line)}
+header .logo{font-size:2rem;font-weight:800;color:var(--p)}
+header p{color:#78716c;margin-top:.3rem}
+.hero-line{font-size:.9rem;color:var(--p);font-weight:700;margin-top:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.3rem;padding:2.5rem 0}
+.prod{border:1px solid #f5f5f4;border-radius:16px;overflow:hidden;transition:.25s;background:#fff}
+.prod:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(217,119,6,.16)}
+.thumb{height:150px;display:flex;align-items:center;justify-content:center;font-size:3.6rem}
+.t1{background:linear-gradient(135deg,#fef3c7,#fde68a)}
+.t2{background:linear-gradient(135deg,#d1fae5,#a7f3d0)}
+.t3{background:linear-gradient(135deg,#fce7f3,#fbcfe8)}
+.t4{background:linear-gradient(135deg,#e0e7ff,#c7d2fe)}
+.t5{background:linear-gradient(135deg,#fee2e2,#fecaca)}
+.t6{background:linear-gradient(135deg,#ede9fe,#ddd6fe)}
+.prod-body{padding:1.1rem}
+.prod-body h3{font-size:1.02rem;color:var(--dark);margin-bottom:.25rem}
+.prod-body .desc{font-size:.82rem;color:#a8a29e;margin-bottom:.7rem;min-height:2.2em}
+.harga{color:var(--p);font-weight:800;font-size:1.15rem}
+.btn{background:var(--p);color:#fff;border:none;padding:.6rem 1.1rem;border-radius:999px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit;transition:.2s;width:100%;margin-top:.7rem}
+.btn:hover{background:var(--pd)}
+.cart{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:2px solid var(--line);padding:.9rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;z-index:40;box-shadow:0 -8px 24px rgba(0,0,0,.06)}
+.cart-info{font-size:.85rem}
+.cart-info b{font-size:1.05rem;color:var(--p)}
+.cart button{background:#25d366;color:#fff;border:none;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+.cart button:disabled{background:#d6d3d1;cursor:not-allowed}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:60;padding:1rem}
+.overlay.show{display:flex}
+.modal{background:#fff;border-radius:18px;padding:1.6rem;max-width:440px;width:100%;max-height:80vh;overflow-y:auto}
+.modal h3{color:var(--dark);margin-bottom:1rem}
+.mrow{display:flex;justify-content:space-between;font-size:.9rem;padding:.5rem 0;border-bottom:1px dashed #f5f5f4}
+.modal input,.modal textarea{width:100%;margin-top:.9rem;padding:.8rem;border:2px solid #f5f5f4;border-radius:10px;font-family:inherit;font-size:.9rem}
+.modal .total{font-weight:800;color:var(--p);font-size:1.1rem;margin-top:1rem;text-align:right}
+footer{background:var(--dark);color:#a8a29e;text-align:center;padding:2rem 1rem;font-size:.82rem;margin-bottom:80px}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  🔍 <b>Ini contoh (demo)</b> — katalog online + order otomatis ke WhatsApp.
+  <a href="../index.html#portfolio">← Kembali ke WebKu</a>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">🧁 Toko Kue Bu Sari</div>
+    <p>Kue rumahan, dibuat segar setiap hari</p>
+    <div class="hero-line">📞 Konsultasi pesanan custom: 0856-4737-6259</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="grid"></div>
+</div>
+
+<!-- CART BAR -->
+<div class="cart">
+  <div class="cart-info">Keranjang: <b id="cartCount">0 item</b> · Rp <b id="cartTotal">0</b></div>
+  <button id="cartBtn" disabled onclick="openOrder()">Pesan via WhatsApp 💬</button>
+</div>
+
+<!-- MODAL ORDER -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Konfirmasi Pesanan</h3>
+    <div id="orderList"></div>
+    <div class="total">Total: Rp <span id="modalTotal">0</span></div>
+    <input type="text" id="namaPem" placeholder="Nama pemesan">
+    <input type="text" id="alamat" placeholder="Alamat kirim">
+    <button class="btn" onclick="kirimWA()">Kirim ke WhatsApp 💬</button>
+    <button class="btn" style="background:#e7e5e4;color:#44403c" onclick="closeOrder()">Tutup</button>
+  </div>
+</div>
+
+<footer>
+  © <span id="yr"></span> Toko Kue Bu Sari · Demo oleh WebKu<br>
+  <a href="../index.html" style="color:#fbbf24">Bikin website seperti ini →</a>
+</footer>
+
+<script>
+const WA = '6285647376259'; // ← nomor demo (WebKu)
+const PRODUK = [
+  {n:'Bolu Pandan', d:'Bolu lembut aroma pandan asli', h:85000, t:'t1', e:'🍰'},
+  {n:'Kue Lapis Legit', d:'Lapis legit premium, 1 loyang', h:150000, t:'t2', e:'🧇'},
+  {n:'Brownies Kukus', d:'Brownies cokelat lembut', h:60000, t:'t3', e:'🍫'},
+  {n:'Kue Ulang Tahun', d:'Custom desain & tulisan', h:200000, t:'t4', e:'🎂'},
+  {n:'Donat Gula', d:'Satu kotak isi 6', h:35000, t:'t5', e:'🍩'},
+  {n:'Risoles Mayo', d:'Isi 10, cocok untuk snack', h:45000, t:'t6', e:'🥟'},
+];
+let cart = {};
+
+function rupiah(n){ return n.toLocaleString('id-ID'); }
+
+function render(){
+  document.getElementById('grid').innerHTML = PRODUK.map((p,i)=>`
+    <div class="prod">
+      <div class="thumb ${p.t}">${p.e}</div>
+      <div class="prod-body">
+        <h3>${p.n}</h3>
+        <div class="desc">${p.d}</div>
+        <div class="harga">Rp ${rupiah(p.h)}</div>
+        <button class="btn" onclick="add(${i})">+ Tambah</button>
+      </div>
+    </div>`).join('');
+}
+
+function add(i){
+  cart[i] = (cart[i]||0) + 1;
+  updateCart();
+}
+
+function updateCart(){
+  const items = Object.keys(cart);
+  const count = items.reduce((s,k)=>s+cart[k],0);
+  const total = items.reduce((s,k)=>s+cart[k]*PRODUK[k].h,0);
+  document.getElementById('cartCount').textContent = count + ' item';
+  document.getElementById('cartTotal').textContent = rupiah(total);
+  document.getElementById('cartBtn').disabled = count === 0;
+}
+
+function openOrder(){
+  const items = Object.keys(cart);
+  if(!items.length) return;
+  let total = 0;
+  document.getElementById('orderList').innerHTML = items.map(k=>{
+    const line = cart[k]*PRODUK[k].h; total += line;
+    return `<div class="mrow"><span>${PRODUK[k].n} × ${cart[k]}</span><span>Rp ${rupiah(line)}</span></div>`;
+  }).join('');
+  document.getElementById('modalTotal').textContent = rupiah(total);
+  document.getElementById('overlay').classList.add('show');
+}
+
+function closeOrder(){ document.getElementById('overlay').classList.remove('show'); }
+
+function kirimWA(){
+  const items = Object.keys(cart);
+  const nama = document.getElementById('namaPem').value.trim() || '-';
+  const alamat = document.getElementById('alamat').value.trim() || '-';
+  let total = 0;
+  let list = items.map(k=>{ const line = cart[k]*PRODUK[k].h; total += line;
+    return `• ${PRODUK[k].n} × ${cart[k]} = Rp ${rupiah(line)}`; }).join('\n');
+  const teks =
+`Halo Bu Sari! Saya mau pesan 🧁
+
+*Pesanan:*
+${list}
+
+*Total:* Rp ${rupiah(total)}
+*Nama:* ${nama}
+*Alamat:* ${alamat}
+
+Terima kasih!`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(teks)}`,'_blank');
+  closeOrder();
+  cart = {}; updateCart();
+}
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+render(); updateCart();
+</script>
+</body>
+</html>
