@@ -1,0 +1,16 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Log
+*.log
+
+# Env (jangan pernah commit rahasia)
+.env
+.env.*
