@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <!-- Background gradient blue navy → bright blue -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1e4d"/>
+      <stop offset="55%" stop-color="#123a8c"/>
+      <stop offset="100%" stop-color="#1e6fd9"/>
+    </linearGradient>
+    <!-- Gold accent -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd76a"/>
+      <stop offset="100%" stop-color="#ffb020"/>
+    </linearGradient>
+    <!-- Green accent -->
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#37e59a"/>
+      <stop offset="100%" stop-color="#0fbf72"/>
+    </linearGradient>
+    <!-- Radial glow -->
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#4d9bff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4d9bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd76a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffd76a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2b56"/>
+      <stop offset="100%" stop-color="#0a1533"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f7bff"/>
+      <stop offset="100%" stop-color="#16d0a6"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <circle cx="540" cy="560" r="470" fill="url(#glow)"/>
+
+  <!-- Organic blobs -->
+  <ellipse cx="130" cy="220" rx="200" ry="150" fill="#2f7bff" opacity="0.22" filter="url(#soft)"/>
+  <ellipse cx="960" cy="1150" rx="240" ry="180" fill="#16d0a6" opacity="0.20" filter="url(#soft)"/>
+  <ellipse cx="980" cy="230" rx="150" ry="120" fill="#ffd76a" opacity="0.16" filter="url(#soft)"/>
+
+  <!-- Decorative rings (top-right) -->
+  <circle cx="1000" cy="180" r="70" fill="none" stroke="#ffd76a" stroke-width="3" opacity="0.5"/>
+  <circle cx="1000" cy="180" r="105" fill="none" stroke="#37e59a" stroke-width="2" opacity="0.3"/>
+
+  <!-- ===== HEADER BADGE ===== -->
+  <g transform="translate(540,96)">
+    <rect x="-205" y="-30" width="410" height="60" rx="30" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+    <text x="0" y="9" text-anchor="middle" font-size="26" font-weight="700" fill="#ffd76a" letter-spacing="3">⚡ LAYANAN ONLINE 24 JAM</text>
+  </g>
+
+  <!-- ===== TITLE ===== -->
+  <text x="540" y="228" text-anchor="middle" font-size="88" font-weight="900" fill="#ffffff" letter-spacing="1">JURAGANKUOTA</text>
+  <text x="540" y="228" text-anchor="middle" font-size="88" font-weight="900" fill="#ffd76a" letter-spacing="1" dx="0" dy="0"></text>
+  <text x="540" y="300" text-anchor="middle" font-size="46" font-weight="800" fill="#ffd76a" letter-spacing="10">.ID</text>
+
+  <!-- ===== ILLUSTRATION: PERSON + PHONE (center) ===== -->
+  <g transform="translate(390,690)" filter="url(#shadow)">
+    <!-- Phone body -->
+    <rect x="0" y="0" width="300" height="470" rx="42" fill="url(#phone)" stroke="#3d5aa8" stroke-width="4"/>
+    <rect x="18" y="42" width="264" height="386" rx="28" fill="url(#screen)"/>
+    <!-- Notch -->
+    <rect x="115" y="14" width="70" height="14" rx="7" fill="#0a1533"/>
+    <!-- Screen content: balance card -->
+    <rect x="42" y="80" width="216" height="86" rx="16" fill="#ffffff" opacity="0.9"/>
+    <text x="60" y="116" font-size="17" font-weight="700" fill="#123a8c">SALDO ANDA</text>
+    <text x="60" y="148" font-size="30" font-weight="900" fill="#0b1e4d">Rp 1.250.000</text>
+    <!-- Menu grid 2x2 -->
+    <g transform="translate(42,192)">
+      <rect width="100" height="78" rx="14" fill="#ffffff" opacity="0.82"/>
+      <circle cx="50" cy="30" r="16" fill="#1e6fd9"/>
+      <path d="M42 30 l5 -9 h6 l5 9 M44 30 h12" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <text x="50" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#123a8c">PULSA</text>
+    </g>
+    <g transform="translate(162,192)">
+      <rect width="100" height="78" rx="14" fill="#ffffff" opacity="0.82"/>
+      <path d="M50 18 l16 8 v10 c0 12 -9 18 -16 20 c-7 -2 -16 -8 -16 -20 v-10 z" fill="#ffb020"/>
+      <text x="50" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#123a8c">TOKEN</text>
+    </g>
+    <g transform="translate(42,282)">
+      <rect width="100" height="70" rx="14" fill="#ffffff" opacity="0.82"/>
+      <!-- dompet jelas -->
+      <rect x="30" y="24" width="40" height="26" rx="5" fill="#0fbf72"/>
+      <path d="M30 31 h40" stroke="#0a8a52" stroke-width="2.5"/>
+      <circle cx="62" cy="37" r="4.5" fill="#ffd76a"/>
+      <text x="50" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="#123a8c">E-WALLET</text>
+    </g>
+    <g transform="translate(162,282)">
+      <rect width="100" height="70" rx="14" fill="#ffffff" opacity="0.82"/>
+      <!-- controller kecil di layar -->
+      <path d="M32 30 q0 -9 9 -9 h18 q9 0 9 9 q0 4 -3 9 q-2 4 -6 4 q-3 0 -5 -3 l-1 -2 h-6 l-1 2 q-2 3 -5 3 q-4 0 -6 -4 q-3 -5 -3 -9z" fill="#7b5cff"/>
+      <path d="M38 30 h7 M41.5 26.5 v7" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <circle cx="60" cy="27" r="2.2" fill="#ffd76a"/><circle cx="64" cy="32" r="2.2" fill="#ff6b6b"/>
+      <text x="50" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="#123a8c">GAME</text>
+    </g>
+  </g>
+
+  <!-- Jari menekan layar (ibu jari, jelas) -->
+  <g>
+    <!-- lengan/hand -->
+    <path d="M700 1300 q-10 -70 18 -110 q22 -32 58 -30 l40 4 q16 2 16 18 q0 14 -16 16 l-30 2 q10 8 6 22 q-4 12 -18 12 l-34 -2 q-18 0 -24 22 q-6 24 -16 46z" fill="#f2b189"/>
+    <!-- ibu jari menekan -->
+    <path d="M726 1010 q-8 -34 14 -46 q20 -12 38 4 q14 14 8 36 l-10 34 q-6 20 -24 18 q-18 -2 -26 -46z" fill="#f7b98a"/>
+    <path d="M742 972 q6 -6 16 -2" stroke="#e09a72" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== FLOATING SERVICE ICONS ===== -->
+  <!-- Token listrik (left top) -->
+  <g transform="translate(150,520)" filter="url(#shadow)">
+    <rect x="-56" y="-56" width="112" height="112" rx="28" fill="#ffffff"/>
+    <path d="M-8 -34 l-20 36 h16 l-8 34 l28 -42 h-16 z" fill="#ffb020"/>
+  </g>
+  <!-- Paket data / wifi (right top) -->
+  <g transform="translate(920,540)" filter="url(#shadow)">
+    <rect x="-56" y="-56" width="112" height="112" rx="28" fill="#ffffff"/>
+    <path d="M-30 6 a30 30 0 0 1 60 0" stroke="#1e6fd9" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M-16 20 a16 16 0 0 1 32 0" stroke="#1e6fd9" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="34" r="5" fill="#1e6fd9"/>
+  </g>
+  <!-- QRIS (left bottom) -->
+  <g transform="translate(170,1010)" filter="url(#shadow)">
+    <rect x="-58" y="-58" width="116" height="116" rx="28" fill="#ffffff"/>
+    <rect x="-30" y="-30" width="24" height="24" rx="4" fill="#0b1e4d"/>
+    <rect x="6" y="-30" width="24" height="24" rx="4" fill="#0b1e4d"/>
+    <rect x="-30" y="6" width="24" height="24" rx="4" fill="#0b1e4d"/>
+    <rect x="6" y="6" width="12" height="12" rx="3" fill="#0fbf72"/>
+    <rect x="22" y="22" width="8" height="8" rx="2" fill="#0fbf72"/>
+  </g>
+  <!-- Game controller (right bottom) - bentuk jelas ala controller -->
+  <g transform="translate(910,1010)" filter="url(#shadow)">
+    <rect x="-58" y="-58" width="116" height="116" rx="28" fill="#ffffff"/>
+    <!-- body controller -->
+    <path d="M-38 -6 q0 -24 22 -24 h32 q22 0 22 24 q0 10 -6 22 q-5 10 -14 10 q-8 0 -12 -8 l-3 -6 h-16 l-3 6 q-4 8 -12 8 q-9 0 -14 -10 q-6 -12 -6 -22z" fill="#7b5cff"/>
+    <!-- d-pad -->
+    <path d="M-24 -8 h16 M-16 -16 v16" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <!-- buttons -->
+    <circle cx="20" cy="-12" r="4.6" fill="#ffd76a"/>
+    <circle cx="30" cy="-2" r="4.6" fill="#ff6b6b"/>
+    <circle cx="10" cy="-2" r="4.6" fill="#37e59a"/>
+    <circle cx="20" cy="8" r="4.6" fill="#5aa9ff"/>
+  </g>
+  <!-- E-wallet coin (left mid) -->
+  <g transform="translate(120,770)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="46" fill="url(#gold)"/>
+    <text x="0" y="12" text-anchor="middle" font-size="40" font-weight="900" fill="#7a4b00">Rp</text>
+  </g>
+
+  <!-- Confetti dots -->
+  <circle cx="330" cy="420" r="7" fill="#ffd76a"/>
+  <circle cx="770" cy="400" r="6" fill="#37e59a"/>
+  <circle cx="850" cy="900" r="7" fill="#ffd76a"/>
+  <circle cx="230" cy="880" r="6" fill="#7b5cff"/>
+  <circle cx="640" cy="1180" r="6" fill="#37e59a"/>
+
+  <!-- ===== FEATURE STRIP ===== -->
+  <g transform="translate(540,1198)">
+    <rect x="-420" y="-42" width="840" height="84" rx="42" fill="#ffffff" opacity="0.14" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+    <text x="0" y="12" text-anchor="middle" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="2">CEPAT ⚡ MURAH 💰 24 JAM ONLINE 🕐</text>
+  </g>
+
+  <!-- ===== BOTTOM CTA + URL ===== -->
+  <g transform="translate(540,1318)">
+    <rect x="-260" y="-38" width="520" height="72" rx="36" fill="url(#green)" filter="url(#shadow)"/>
+    <text x="0" y="12" text-anchor="middle" font-size="38" font-weight="900" fill="#053b25">🌐 juragankuota.id</text>
+  </g>
+
+  <!-- watermark -->
+  <text x="540" y="1352" text-anchor="middle" font-size="0" fill="#fff">juragankuota.id</text>
+</svg>
