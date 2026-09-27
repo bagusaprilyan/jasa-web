@@ -71,6 +71,19 @@ Mohon dihubungi ya. Terima kasih!`;
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ============ Hamburger menu (mobile) ============ */
+  const navToggle = document.getElementById('navToggle');
+  const navMobile = document.getElementById('navMobile');
+  if (navToggle && navMobile) {
+    navToggle.addEventListener('click', () => {
+      navMobile.classList.toggle('open');
+    });
+    // Tutup menu setelah klik link
+    navMobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navMobile.classList.remove('open'));
+    });
+  }
+
   /* ============ Animasi reveal DIHAPUS ============
      Alasan: landing page jasa harus SELALU tampil instan & andal.
      Tidak boleh ada risiko konten kosong kalau JS lambat/gagal.

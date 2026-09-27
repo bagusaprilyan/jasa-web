@@ -29,6 +29,17 @@
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <a href="#order" class="btn btn-primary nav-cta">Konsultasi Gratis</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#layanan">Layanan</a>
+      <a href="#bot-telegram">Bot Telegram</a>
+      <a href="#harga">Harga</a>
+      <a href="#portfolio">Portofolio</a>
+      <a href="#faq">FAQ</a>
+      <a href="#order" style="color:#16a34a;font-weight:700">Konsultasi Gratis →</a>
+    </div>
   </div>
 </nav>
 
@@ -117,22 +128,25 @@
       <p style="color:#cbd5e1;margin:0">Bot kas, katalog, manajemen servis, absensi, &amp; auto-content — semua sudah terbukti berjalan di server.</p>
     </div>
 
-    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center">
-      <div style="background:#1e293b;border:2px solid #22c55e;border-radius:16px;padding:24px;min-width:240px;flex:1;text-align:center">
-        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">PAKET BASIC</div>
+    <div class="bot-pricing">
+      <div style="background:#1e293b;border:2px solid #22c55e;border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">BOT START</div>
         <div style="font-size:2.2rem;font-weight:900;color:#38bdf8">Rp1,5jt</div>
         <p style="color:#94a3b8;font-size:.9rem">1 fungsi bot · 3-5 hari · 1x revisi</p>
+        <a href="#order" class="btn btn-block" data-paket="Bot START" style="display:block;margin-top:16px;background:#22c55e;color:#052e16;font-weight:700;padding:12px;border-radius:10px;text-decoration:none">Pilih BOT START</a>
       </div>
-      <div style="background:#1e293b;border:3px solid #a855f7;border-radius:16px;padding:24px;min-width:240px;flex:1;text-align:center;position:relative">
-        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#a855f7;color:#fff;font-size:.7rem;font-weight:700;padding:4px 14px;border-radius:20px">TERLARIS</div>
-        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">PAKET BISNIS</div>
+      <div style="background:#1e293b;border:3px solid #a855f7;border-radius:16px;padding:24px;text-align:center;position:relative">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#a855f7;color:#fff;font-size:.7rem;font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap">TERLARIS</div>
+        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">BOT PRO</div>
         <div style="font-size:2.2rem;font-weight:900;color:#a855f7">Rp3,5jt</div>
         <p style="color:#94a3b8;font-size:.9rem">2-3 fungsi · Sheets/Drive · 7-10 hari · 3x revisi</p>
+        <a href="#order" class="btn btn-block" data-paket="Bot PRO" style="display:block;margin-top:16px;background:#a855f7;color:#fff;font-weight:700;padding:12px;border-radius:10px;text-decoration:none">Pilih BOT PRO →</a>
       </div>
-      <div style="background:#1e293b;border:2px solid #f59e0b;border-radius:16px;padding:24px;min-width:240px;flex:1;text-align:center">
-        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">PAKET PREMIUM</div>
+      <div style="background:#1e293b;border:2px solid #f59e0b;border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:.8rem;color:#94a3b8;letter-spacing:1px">BOT ENTERPRISE</div>
         <div style="font-size:2.2rem;font-weight:900;color:#f59e0b">Rp6,5jt+</div>
         <p style="color:#94a3b8;font-size:.9rem">Fitur custom · QRIS · multi-cabang · maintenance 3 bln</p>
+        <a href="#order" class="btn btn-block" data-paket="Bot ENTERPRISE" style="display:block;margin-top:16px;background:#f59e0b;color:#052e16;font-weight:700;padding:12px;border-radius:10px;text-decoration:none">Pilih BOT ENTERPRISE</a>
       </div>
     </div>
 
@@ -146,8 +160,8 @@
 <!-- HARGA -->
 <section class="section pricing" id="harga">
   <div class="container">
-    <h2 class="section-title">Pilih Paket Sesuai Kebutuhan</h2>
-    <p class="section-sub">Harga transparan. Tidak ada biaya tersembunyi.</p>
+    <h2 class="section-title">Paket Website &amp; Bot WA</h2>
+    <p class="section-sub">Harga jasa web &amp; bot WhatsApp. Untuk paket Bot Telegram, lihat <a href="#bot-telegram" style="color:#2563eb;font-weight:600">di atas</a>.</p>
     <div class="grid-3 pricing-grid">
       <div class="price-card">
         <h3>Starter</h3>
@@ -276,9 +290,16 @@
       <label>Paket yang Diminati
         <select name="paket" id="paketSelect">
           <option value="Belum tahu / mau konsultasi">Belum tahu / mau konsultasi</option>
-          <option value="Starter (Rp750rb)">Starter (Rp750rb)</option>
-          <option value="Bisnis (Rp1,5jt)">Bisnis (Rp1,5jt)</option>
-          <option value="Toko Online (Rp2,5jt+)">Toko Online (Rp2,5jt+)</option>
+          <optgroup label="— Jasa Web &amp; Bot WA —">
+            <option value="Web Starter (Rp750rb)">Web Starter (Rp750rb)</option>
+            <option value="Web Bisnis (Rp1,5jt)">Web Bisnis (Rp1,5jt)</option>
+            <option value="Web Toko Online (Rp2,5jt+)">Web Toko Online (Rp2,5jt+)</option>
+          </optgroup>
+          <optgroup label="— Jasa Bot Telegram —">
+            <option value="Bot START (Rp1,5jt)">Bot START (Rp1,5jt)</option>
+            <option value="Bot PRO (Rp3,5jt)">Bot PRO (Rp3,5jt)</option>
+            <option value="Bot ENTERPRISE (Rp6,5jt+)">Bot ENTERPRISE (Rp6,5jt+)</option>
+          </optgroup>
         </select>
       </label>
       <label>Kebutuhan / Pesan<textarea name="pesan" rows="4" placeholder="Ceritakan singkat usaha & apa yang Anda butuhkan..."></textarea></label>
