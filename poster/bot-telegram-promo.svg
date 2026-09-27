@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="950" cy="180" r="220" fill="#38bdf8" opacity="0.08"/>
+  <circle cx="120" cy="1700" r="260" fill="#a855f7" opacity="0.08"/>
+
+  <!-- Header badge -->
+  <rect x="70" y="90" width="420" height="70" rx="35" fill="url(#accent)"/>
+  <text x="280" y="138" font-family="Arial, sans-serif" font-size="34" font-weight="bold"
+        fill="#0f172a" text-anchor="middle">JASA BOT TELEGRAM</text>
+
+  <!-- Main headline -->
+  <text x="70" y="290" font-family="Arial, sans-serif" font-size="86" font-weight="900" fill="#ffffff">Bot yang</text>
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="86" font-weight="900" fill="#38bdf8">kerja</text>
+  <text x="70" y="490" font-family="Arial, sans-serif" font-size="86" font-weight="900" fill="#ffffff">tanpa gaji.</text>
+
+  <!-- Subheadline -->
+  <text x="70" y="570" font-family="Arial, sans-serif" font-size="38" fill="#94a3b8">Tidur nggak. Salah nggak. Lelah nggak.</text>
+
+  <!-- Feature cards -->
+  <g font-family="Arial, sans-serif">
+    <!-- Card 1 -->
+    <rect x="70" y="650" width="440" height="150" rx="24" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+    <text x="100" y="720" font-size="52">💰</text>
+    <text x="175" y="715" font-size="34" font-weight="bold" fill="#ffffff">Catat Kas Otomatis</text>
+    <text x="175" y="760" font-size="26" fill="#94a3b8">Pemasukan &amp; pengeluaran rapi</text>
+
+    <!-- Card 2 -->
+    <rect x="570" y="650" width="440" height="150" rx="24" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+    <text x="600" y="720" font-size="52">🛒</text>
+    <text x="675" y="715" font-size="34" font-weight="bold" fill="#ffffff">Balas Orderan</text>
+    <text x="675" y="760" font-size="26" fill="#94a3b8">Pelanggan dilayani 24 jam</text>
+
+    <!-- Card 3 -->
+    <rect x="70" y="830" width="440" height="150" rx="24" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+    <text x="100" y="900" font-size="52">📅</text>
+    <text x="175" y="895" font-size="34" font-weight="bold" fill="#ffffff">Ingat Jadwal</text>
+    <text x="175" y="940" font-size="26" fill="#94a3b8">Pesanan &amp; booking terjadwal</text>
+
+    <!-- Card 4 -->
+    <rect x="570" y="830" width="440" height="150" rx="24" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+    <text x="600" y="900" font-size="52">📊</text>
+    <text x="675" y="895" font-size="34" font-weight="bold" fill="#ffffff">Laporan Otomatis</text>
+    <text x="675" y="940" font-size="26" fill="#94a3b8">Kirim tiap sore ke HP Anda</text>
+  </g>
+
+  <!-- Why us box -->
+  <rect x="70" y="1040" width="940" height="230" rx="28" fill="#0c4a6e" opacity="0.5" stroke="#38bdf8" stroke-width="3"/>
+  <text x="110" y="1110" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#38bdf8">Kami SUDAH bikin bot yang jalan</text>
+  <text x="110" y="1165" font-family="Arial, sans-serif" font-size="30" fill="#e2e8f0">Bukan sekadar teori atau janji.</text>
+  <text x="110" y="1225" font-family="Arial, sans-serif" font-size="30" fill="#e2e8f0">Bot kas, katalog, absensi, booking — siap pakai.</text>
+
+  <!-- Pricing -->
+  <text x="70" y="1370" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ffffff">Harga mulai</text>
+  <text x="70" y="1490" font-family="Arial, sans-serif" font-size="120" font-weight="900" fill="url(#accent)">Rp1,5jt</text>
+  <text x="70" y="1550" font-family="Arial, sans-serif" font-size="30" fill="#94a3b8">Pengerjaan 3-10 hari · Bergaransi</text>
+
+  <!-- CTA -->
+  <rect x="70" y="1620" width="940" height="120" rx="60" fill="#22c55e"/>
+  <text x="540" y="1698" font-family="Arial, sans-serif" font-size="44" font-weight="bold"
+        fill="#052e16" text-anchor="middle">💬 Konsultasi GRATIS Sekarang</text>
+
+  <!-- Contact -->
+  <text x="540" y="1810" font-family="Arial, sans-serif" font-size="40" font-weight="bold"
+        fill="#ffffff" text-anchor="middle">wa.me/6285647376259</text>
+  <text x="540" y="1870" font-family="Arial, sans-serif" font-size="28"
+        fill="#64748b" text-anchor="middle">Bot Telegram untuk Bisnis · Indonesia</text>
+</svg>

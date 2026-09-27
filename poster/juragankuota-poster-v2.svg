@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" font-family="'Poppins','Montserrat','Arial Black',sans-serif">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060e2e"/>
+      <stop offset="45%" stop-color="#0b1e4d"/>
+      <stop offset="100%" stop-color="#0d2d6e"/>
+    </linearGradient>
+    <!-- Glow radial -->
+    <radialGradient id="glowCenter" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#1e6fd9" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#060e2e" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe480"/>
+      <stop offset="100%" stop-color="#ffb020"/>
+    </linearGradient>
+    <!-- Green CTA gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#37e59a"/>
+      <stop offset="100%" stop-color="#0fbf72"/>
+    </linearGradient>
+    <!-- Blue card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e4fa8"/>
+      <stop offset="100%" stop-color="#0d3080"/>
+    </linearGradient>
+    <!-- Phone screen gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a8f"/>
+      <stop offset="100%" stop-color="#0a1f5c"/>
+    </linearGradient>
+    <!-- Icon box shadow -->
+    <filter id="iconShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <!-- Glow filter for badge -->
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Blob blur -->
+    <filter id="blobBlur"><feGaussianBlur stdDeviation="28"/></filter>
+    <!-- Card shadow -->
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="1080" height="1350" fill="url(#bgGrad)"/>
+  <rect width="1080" height="1350" fill="url(#glowCenter)"/>
+
+  <!-- Blobs dekoratif -->
+  <ellipse cx="120" cy="200" rx="220" ry="180" fill="#1e6fd9" opacity="0.13" filter="url(#blobBlur)"/>
+  <ellipse cx="980" cy="900" rx="240" ry="200" fill="#ffd76a" opacity="0.08" filter="url(#blobBlur)"/>
+  <ellipse cx="540" cy="680" rx="300" ry="260" fill="#1e6fd9" opacity="0.10" filter="url(#blobBlur)"/>
+  <ellipse cx="80" cy="1100" rx="160" ry="140" fill="#37e59a" opacity="0.09" filter="url(#blobBlur)"/>
+  <ellipse cx="1000" cy="200" rx="160" ry="140" fill="#7b5cff" opacity="0.10" filter="url(#blobBlur)"/>
+
+  <!-- Grid titik dekoratif (dot pattern) -->
+  <g opacity="0.06">
+    <pattern id="dots" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2.5" fill="#fff"/>
+    </pattern>
+    <rect width="1080" height="1350" fill="url(#dots)"/>
+  </g>
+
+  <!-- Garis lengkung dekoratif atas -->
+  <path d="M-60 320 Q270 160 540 280 Q810 400 1140 240" stroke="#1e6fd9" stroke-width="1.5" fill="none" opacity="0.22"/>
+  <path d="M-60 360 Q270 200 540 320 Q810 440 1140 280" stroke="#ffd76a" stroke-width="0.8" fill="none" opacity="0.12"/>
+
+  <!-- ── HEADER ── -->
+  <!-- Badge "24 JAM ONLINE" -->
+  <rect x="300" y="52" width="480" height="52" rx="26" fill="#ffffff" opacity="0.10"/>
+  <rect x="300" y="52" width="480" height="52" rx="26" fill="none" stroke="#ffd76a" stroke-width="1.5" opacity="0.4"/>
+  <text x="540" y="85" text-anchor="middle" fill="#ffd76a" font-size="19" font-weight="700" letter-spacing="4">⚡ LAYANAN ONLINE 24 JAM</text>
+
+  <!-- Logo pill -->
+  <rect x="60" y="130" width="60" height="60" rx="18" fill="url(#goldGrad)" filter="url(#iconShadow)"/>
+  <!-- Lightning bolt icon -->
+  <polygon points="86,142 78,162 88,162 76,178 100,155 88,155 100,142" fill="#0b1e4d"/>
+
+  <!-- Nama brand -->
+  <text x="142" y="162" fill="#ffffff" font-size="42" font-weight="900" letter-spacing="1">JURAGAN</text>
+  <text x="142" y="196" fill="url(#goldGrad)" font-size="28" font-weight="900" letter-spacing="10">KUOTA</text>
+
+  <!-- Tagline kanan -->
+  <text x="1020" y="158" text-anchor="end" fill="#ffffff" font-size="17" font-weight="400" opacity="0.7">Mudah · Cepat · Aman</text>
+  <text x="1020" y="182" text-anchor="end" fill="#ffd76a" font-size="17" font-weight="600">juragankuota.id</text>
+
+  <!-- Divider line -->
+  <line x1="60" y1="220" x2="1020" y2="220" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+
+  <!-- ── HERO TITLE ── -->
+  <text x="540" y="298" text-anchor="middle" fill="#ffffff" font-size="92" font-weight="900" letter-spacing="-2">JURAGAN</text>
+  <text x="540" y="380" text-anchor="middle" fill="url(#goldGrad)" font-size="92" font-weight="900" letter-spacing="-2">KUOTA</text>
+  <!-- Garis bawah judul -->
+  <rect x="200" y="396" width="680" height="4" rx="2" fill="url(#goldGrad)" opacity="0.6"/>
+
+  <!-- Subtitle -->
+  <text x="540" y="440" text-anchor="middle" fill="#a8c4ff" font-size="22" font-weight="400" letter-spacing="2">Platform PPOB Terpercaya Indonesia</text>
+
+  <!-- ── PHONE MOCKUP ── -->
+  <!-- Phone body -->
+  <rect x="340" y="474" width="400" height="620" rx="44" fill="#0a1530" filter="url(#cardShadow)"/>
+  <rect x="340" y="474" width="400" height="620" rx="44" fill="none" stroke="#1e6fd9" stroke-width="2.5" opacity="0.6"/>
+  <!-- Inner bezel -->
+  <rect x="356" y="490" width="368" height="588" rx="34" fill="url(#screenGrad)"/>
+  <!-- Camera notch -->
+  <rect x="485" y="500" width="110" height="26" rx="13" fill="#060e2e"/>
+  <circle cx="540" cy="513" r="6" fill="#1a2a5e"/>
+  <circle cx="520" cy="513" r="3" fill="#1e3a6e"/>
+
+  <!-- ── APP UI DI LAYAR HP ── -->
+  <!-- Status bar -->
+  <text x="376" y="542" fill="#a8c4ff" font-size="14" font-weight="600">19:08</text>
+  <text x="704" y="542" text-anchor="end" fill="#a8c4ff" font-size="14">WiFi ▌</text>
+
+  <!-- Saldo card -->
+  <rect x="372" y="554" width="336" height="110" rx="18" fill="url(#cardGrad)" filter="url(#iconShadow)"/>
+  <rect x="372" y="554" width="336" height="110" rx="18" fill="none" stroke="#3d6fd0" stroke-width="1.5"/>
+  <text x="540" y="578" text-anchor="middle" fill="#a8c4ff" font-size="13" letter-spacing="2">SALDO ANDA</text>
+  <text x="540" y="618" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="900">Rp 125.000</text>
+  <!-- Status aktif -->
+  <rect x="472" y="628" width="136" height="24" rx="12" fill="#0fbf72" opacity="0.2"/>
+  <circle cx="492" cy="640" r="5" fill="#37e59a"/>
+  <text x="505" y="645" fill="#37e59a" font-size="13" font-weight="600">Akun Aktif</text>
+
+  <!-- Grid menu 2x3 -->
+  <!-- Baris 1 -->
+  <!-- PULSA -->
+  <rect x="372" y="680" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="372" y="680" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon pulsa: sinyal bars -->
+  <rect x="399" y="710" width="10" height="18" rx="2" fill="#ffd76a"/>
+  <rect x="413" y="704" width="10" height="24" rx="2" fill="#ffd76a"/>
+  <rect x="427" y="697" width="10" height="31" rx="2" fill="#ffd76a"/>
+  <text x="422" y="757" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">PULSA</text>
+
+  <!-- TOKEN -->
+  <rect x="490" y="680" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="490" y="680" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon petir -->
+  <polygon points="541,699 530,724 539,724 527,747 553,720 541,720 553,699" fill="#ffd76a"/>
+  <text x="540" y="757" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">TOKEN PLN</text>
+
+  <!-- DATA -->
+  <rect x="608" y="680" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="608" y="680" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon wifi -->
+  <path d="M658 700 Q677 715 696 700" stroke="#37e59a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M662 710 Q677 720 692 710" stroke="#37e59a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M667 719 Q677 725 687 719" stroke="#37e59a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="677" cy="730" r="5" fill="#37e59a"/>
+  <text x="658" y="757" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">PAKET DATA</text>
+
+  <!-- Baris 2 -->
+  <!-- E-WALLET -->
+  <rect x="372" y="778" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="372" y="778" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon dompet -->
+  <rect x="399" y="799" width="46" height="32" rx="6" fill="none" stroke="#37e59a" stroke-width="3"/>
+  <path d="M399 811 h46" stroke="#37e59a" stroke-width="2.5"/>
+  <path d="M430 810 h8 a5 5 0 0 1 0 10 h-8 z" fill="#37e59a"/>
+  <text x="422" y="855" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">E-WALLET</text>
+
+  <!-- GAME -->
+  <rect x="490" y="778" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="490" y="778" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon game controller -->
+  <path d="M519 803 q0-10 9-10 h24 q9 0 9 10 v14 q0 10-9 10 h-24 q-9 0-9-10 z" fill="none" stroke="#7b5cff" stroke-width="3"/>
+  <!-- D-pad -->
+  <line x1="527" y1="810" x2="527" y2="820" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="522" y1="815" x2="532" y2="815" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tombol ABXY -->
+  <circle cx="553" cy="810" r="3.5" fill="#37e59a"/>
+  <circle cx="558" cy="816" r="3.5" fill="#ffd76a"/>
+  <circle cx="548" cy="816" r="3.5" fill="#ff6b6b"/>
+  <circle cx="553" cy="822" r="3.5" fill="#60b4ff"/>
+  <text x="540" y="855" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">GAME TOP UP</text>
+
+  <!-- QRIS -->
+  <rect x="608" y="778" width="100" height="88" rx="16" fill="#ffffff" opacity="0.07"/>
+  <rect x="608" y="778" width="100" height="88" rx="16" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.15"/>
+  <!-- Ikon QR (3 corner squares) -->
+  <rect x="634" y="798" width="14" height="14" rx="3" fill="none" stroke="#ffd76a" stroke-width="2.5"/>
+  <rect x="652" y="798" width="14" height="14" rx="3" fill="none" stroke="#ffd76a" stroke-width="2.5"/>
+  <rect x="634" y="816" width="14" height="14" rx="3" fill="none" stroke="#ffd76a" stroke-width="2.5"/>
+  <rect x="653" y="816" width="12" height="12" rx="2" fill="#ffd76a" opacity="0.5"/>
+  <line x1="653" y1="800" x2="665" y2="800" stroke="#ffd76a" stroke-width="2"/>
+  <line x1="636" y1="822" x2="648" y2="822" stroke="#ffd76a" stroke-width="2"/>
+  <text x="658" y="855" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">QRIS BAYAR</text>
+
+  <!-- Home bar hp -->
+  <rect x="470" y="1044" width="140" height="5" rx="3" fill="#ffffff" opacity="0.25"/>
+
+  <!-- ── IKON MELAYANG ── -->
+  <!-- Ikon kiri atas: Transaksi -->
+  <rect x="40" y="540" width="110" height="110" rx="28" fill="#ffffff" opacity="0.97" filter="url(#iconShadow)"/>
+  <!-- Ikon receipt/struk -->
+  <rect x="67" y="562" width="56" height="66" rx="6" fill="#1e6fd9"/>
+  <line x1="78" y1="578" x2="112" y2="578" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="78" y1="590" x2="112" y2="590" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="78" y1="602" x2="100" y2="602" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <!-- centang hijau -->
+  <circle cx="113" cy="610" r="13" fill="#0fbf72"/>
+  <polyline points="107,610 111,615 120,605" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="95" y="668" text-anchor="middle" fill="#0b1e4d" font-size="13" font-weight="800">TRANSAKSI</text>
+
+  <!-- Ikon kiri bawah: Aman -->
+  <rect x="30" y="720" width="110" height="110" rx="28" fill="#ffffff" opacity="0.97" filter="url(#iconShadow)"/>
+  <!-- Ikon perisai -->
+  <path d="M85 738 l26 0 q6 0 6 6 l0 30 q0 26-32 36 q-32-10-32-36 l0-30 q0-6 6-6 z" fill="none" stroke="#0fbf72" stroke-width="4"/>
+  <polyline points="72,768 82,778 100,757" fill="none" stroke="#0fbf72" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="85" y="848" text-anchor="middle" fill="#0b1e4d" font-size="13" font-weight="800">AMAN</text>
+
+  <!-- Ikon kanan atas: Harga -->
+  <rect x="930" y="540" width="110" height="110" rx="28" fill="#ffffff" opacity="0.97" filter="url(#iconShadow)"/>
+  <!-- Ikon tag harga -->
+  <path d="M975 560 l26 0 a6 6 0 0 1 6 6 l0 20 l-30 30 l-30-30 l0-20 a6 6 0 0 1 6-6 z" fill="url(#goldGrad)"/>
+  <circle cx="1001" cy="577" r="5" fill="#fff"/>
+  <text x="985" y="618" text-anchor="middle" fill="#0b1e4d" font-size="27" font-weight="900">%</text>
+  <text x="985" y="668" text-anchor="middle" fill="#0b1e4d" font-size="13" font-weight="800">MURAH</text>
+
+  <!-- Ikon kanan bawah: Cepat -->
+  <rect x="940" y="720" width="110" height="110" rx="28" fill="#ffffff" opacity="0.97" filter="url(#iconShadow)"/>
+  <!-- Ikon stopwatch -->
+  <circle cx="995" cy="782" r="28" fill="none" stroke="#1e6fd9" stroke-width="4"/>
+  <circle cx="995" cy="782" r="5" fill="#1e6fd9"/>
+  <line x1="995" y1="782" x2="995" y2="762" stroke="#1e6fd9" stroke-width="4" stroke-linecap="round"/>
+  <line x1="995" y1="782" x2="1010" y2="782" stroke="#ffd76a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="989" y="752" width="12" height="5" rx="2" fill="#1e6fd9"/>
+  <text x="995" y="848" text-anchor="middle" fill="#0b1e4d" font-size="13" font-weight="800">CEPAT</text>
+
+  <!-- Konfeti bintang -->
+  <text x="170" y="490" font-size="22" opacity="0.5">✦</text>
+  <text x="900" y="510" font-size="18" opacity="0.4">✦</text>
+  <text x="80" y="870" font-size="16" opacity="0.35">◆</text>
+  <text x="980" y="870" font-size="20" opacity="0.4">◆</text>
+  <text x="240" y="470" font-size="12" fill="#ffd76a" opacity="0.5">●</text>
+  <text x="850" y="490" font-size="12" fill="#37e59a" opacity="0.5">●</text>
+
+  <!-- ── STRIP KEUNGGULAN ── -->
+  <rect x="40" y="1120" width="1000" height="76" rx="20" fill="#ffffff" opacity="0.06"/>
+  <rect x="40" y="1120" width="1000" height="76" rx="20" fill="none" stroke="#1e6fd9" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Item fitur -->
+  <text x="140" y="1166" text-anchor="middle" fill="#ffd76a" font-size="26">⚡</text>
+  <text x="210" y="1162" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">INSTAN</text>
+  <text x="210" y="1183" text-anchor="middle" fill="#a8c4ff" font-size="13">Proses &lt;5 detik</text>
+
+  <line x1="310" y1="1132" x2="310" y2="1184" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+  <text x="390" y="1166" text-anchor="middle" fill="#37e59a" font-size="26">🔒</text>
+  <text x="460" y="1162" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">TERPERCAYA</text>
+  <text x="460" y="1183" text-anchor="middle" fill="#a8c4ff" font-size="13">SSL &amp; enkripsi</text>
+
+  <line x1="560" y1="1132" x2="560" y2="1184" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+  <text x="640" y="1166" text-anchor="middle" fill="#60b4ff" font-size="26">📱</text>
+  <text x="710" y="1162" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">MULTI-PRODUK</text>
+  <text x="710" y="1183" text-anchor="middle" fill="#a8c4ff" font-size="13">Pulsa, Data, Game</text>
+
+  <line x1="810" y1="1132" x2="810" y2="1184" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+  <text x="880" y="1166" text-anchor="middle" fill="#ffd76a" font-size="26">🌐</text>
+  <text x="950" y="1162" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">24 JAM</text>
+  <text x="950" y="1183" text-anchor="middle" fill="#a8c4ff" font-size="13">Tanpa libur</text>
+
+  <!-- ── CTA BAWAH ── -->
+  <rect x="80" y="1222" width="920" height="88" rx="44" fill="url(#greenGrad)" filter="url(#cardShadow)"/>
+  <!-- Inner glow effect -->
+  <rect x="80" y="1222" width="920" height="88" rx="44" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25"/>
+  <!-- Highlight atas -->
+  <rect x="100" y="1228" width="880" height="20" rx="20" fill="#ffffff" opacity="0.08"/>
+  <text x="540" y="1257" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="600" letter-spacing="3" opacity="0.85">KUNJUNGI SEKARANG</text>
+  <text x="540" y="1296" text-anchor="middle" fill="#ffffff" font-size="38" font-weight="900" letter-spacing="2">🌐 juragankuota.id</text>
+
+  <!-- Footer tagline -->
+  <text x="540" y="1338" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="400" opacity="0.4" letter-spacing="2">Mudah · Cepat · Aman · 24 Jam</text>
+</svg>
