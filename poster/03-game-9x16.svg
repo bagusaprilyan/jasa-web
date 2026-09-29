@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920" font-family="'Montserrat', 'Poppins', 'Arial Black', sans-serif">
+  <defs>
+    <filter id="shL" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="16" dy="16" stdDeviation="0" flood-color="#111111"/></filter>
+    <filter id="shM" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="10" dy="10" stdDeviation="0" flood-color="#111111"/></filter>
+    <filter id="shS" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="6" dy="6" stdDeviation="0" flood-color="#111111"/></filter>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="3.5" fill="#ffffff"/></pattern>
+  </defs>
+
+  <!-- BG: purple -->
+  <rect width="1080" height="1920" fill="#7b5cff"/>
+  <g opacity="0.14"><rect width="1080" height="1920" fill="url(#dots)"/></g>
+  <g opacity="0.12">
+    <rect x="-260" y="1420" width="1700" height="50" fill="#111111" transform="rotate(-14 540 1440)"/>
+    <rect x="-260" y="1540" width="1700" height="50" fill="#111111" transform="rotate(-14 540 1560)"/>
+    <rect x="-260" y="1660" width="1700" height="50" fill="#111111" transform="rotate(-14 540 1680)"/>
+  </g>
+
+  <!-- HEADER WORDMARK -->
+  <g transform="translate(540,118)">
+    <rect x="-360" y="-52" width="720" height="104" rx="52" fill="#ffffff" stroke="#111111" stroke-width="8" filter="url(#shM)"/>
+    <circle cx="-290" cy="0" r="26" fill="#ff4b4b" stroke="#111111" stroke-width="6"/>
+    <text x="-240" y="18" font-size="52" font-weight="900" fill="#111111" letter-spacing="1">JuraganKuota</text>
+  </g>
+
+  <!-- TITLE BADGE -->
+  <g transform="translate(540,300)">
+    <rect x="-460" y="-86" width="920" height="172" rx="26" fill="#ffd76a" stroke="#111111" stroke-width="10" filter="url(#shL)"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="96" font-weight="900" fill="#111111" letter-spacing="2">TOP UP GAME</text>
+    <text x="0" y="62" text-anchor="middle" font-size="40" font-weight="900" fill="#111111" letter-spacing="2">DIAMOND • UC • VOUCHER</text>
+  </g>
+
+  <!-- HERO -->
+  <g transform="translate(0,520)">
+    <!-- big diamond/coin illustration -->
+    <g transform="translate(150,60)">
+      <rect x="0" y="0" width="560" height="440" rx="30" fill="#111111" stroke="#111111" stroke-width="12" filter="url(#shL)"/>
+      <text x="280" y="96" text-anchor="middle" font-size="34" font-weight="900" fill="#38e8ff">🎮 GAME FAVORITMU</text>
+      <!-- game chips -->
+      <g font-size="26" font-weight="900">
+        <rect x="34" y="130" width="240" height="80" rx="14" fill="#ff4b4b" stroke="#ffffff" stroke-width="4"/>
+        <text x="154" y="180" text-anchor="middle" fill="#ffffff" font-size="24">MOBILE LEGENDS</text>
+
+        <rect x="290" y="130" width="236" height="80" rx="14" fill="#0fbf72" stroke="#ffffff" stroke-width="4"/>
+        <text x="408" y="180" text-anchor="middle" fill="#ffffff" font-size="30">FREE FIRE</text>
+
+        <rect x="34" y="226" width="240" height="80" rx="14" fill="#ffd76a" stroke="#ffffff" stroke-width="4"/>
+        <text x="154" y="276" text-anchor="middle" fill="#111111" font-size="26">PUBG MOBILE</text>
+
+        <rect x="290" y="226" width="236" height="80" rx="14" fill="#38e8ff" stroke="#ffffff" stroke-width="4"/>
+        <text x="408" y="276" text-anchor="middle" fill="#111111" font-size="24">GENSHIN IMPACT</text>
+
+        <rect x="34" y="322" width="492" height="80" rx="14" fill="#ffffff" stroke="#111111" stroke-width="4"/>
+        <text x="280" y="372" text-anchor="middle" fill="#7b5cff" font-size="30">+ RIBUAN GAME LAINNYA</text>
+      </g>
+    </g>
+
+    <!-- floating stickers -->
+    <g transform="translate(905,220) rotate(14)">
+      <rect x="-205" y="-58" width="410" height="116" rx="18" fill="#0fbf72" stroke="#111111" stroke-width="7" filter="url(#shM)"/>
+      <text x="0" y="16" text-anchor="middle" font-size="40" font-weight="900" fill="#ffffff" stroke="#111111" stroke-width="2" paint-order="stroke">PROSES INSTAN</text>
+    </g>
+    <g transform="translate(150,620) rotate(-12)">
+      <rect x="-190" y="-56" width="380" height="112" rx="18" fill="#ff4b4b" stroke="#111111" stroke-width="7" filter="url(#shM)"/>
+      <text x="0" y="16" text-anchor="middle" font-size="38" font-weight="900" fill="#ffffff" stroke="#111111" stroke-width="2" paint-order="stroke">CUKUP ID GAME</text>
+    </g>
+
+    <!-- phone confirm -->
+    <g transform="translate(300,520)">
+      <rect x="0" y="0" width="480" height="380" rx="44" fill="#f4f5f7" stroke="#111111" stroke-width="12" filter="url(#shL)"/>
+      <rect x="18" y="18" width="444" height="344" rx="28" fill="#ffffff" stroke="#111111" stroke-width="5"/>
+      <rect x="170" y="18" width="140" height="24" rx="12" fill="#111111"/>
+      <text x="40" y="90" font-size="26" font-weight="900" fill="#666666">Masukkan User ID</text>
+      <rect x="40" y="110" width="400" height="76" rx="14" fill="#ffffff" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+      <text x="64" y="158" font-size="32" font-weight="900" fill="#111111">123456789 (1234)</text>
+      <rect x="40" y="206" width="400" height="72" rx="14" fill="#38e8ff" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+      <text x="240" y="250" text-anchor="middle" font-size="26" font-weight="900" fill="#111111">✓ Nick: PRO PLAYER</text>
+      <rect x="40" y="294" width="400" height="64" rx="16" fill="#ff4b4b" stroke="#111111" stroke-width="6" filter="url(#shS)"/>
+      <text x="240" y="336" text-anchor="middle" font-size="26" font-weight="900" fill="#ffffff">💎 BELI DIAMOND</text>
+    </g>
+  </g>
+
+  <!-- FEATURE STRIP -->
+  <g transform="translate(540,1560)">
+    <rect x="-470" y="-96" width="940" height="192" rx="24" fill="#ffffff" stroke="#111111" stroke-width="9" filter="url(#shL)"/>
+    <g>
+      <circle cx="-380" cy="-38" r="22" fill="#7b5cff" stroke="#111111" stroke-width="5"/>
+      <path d="M-391 -38 l9 9 l18 -18" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-338" y="-26" font-size="36" font-weight="900" fill="#111111">Harga Grosir</text>
+
+      <circle cx="120" cy="-38" r="22" fill="#ffd76a" stroke="#111111" stroke-width="5"/>
+      <path d="M109 -38 l9 9 l18 -18" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="-26" font-size="36" font-weight="900" fill="#111111">Masuk Otomatis</text>
+
+      <circle cx="-380" cy="46" r="22" fill="#0fbf72" stroke="#111111" stroke-width="5"/>
+      <path d="M-391 46 l9 9 l18 -18" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-338" y="58" font-size="36" font-weight="900" fill="#111111">Legal &amp; Aman</text>
+
+      <circle cx="120" cy="46" r="22" fill="#ff4b4b" stroke="#111111" stroke-width="5"/>
+      <path d="M109 46 l9 9 l18 -18" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="58" font-size="36" font-weight="900" fill="#111111">Tanpa Login</text>
+    </g>
+  </g>
+
+  <!-- CTA FOOTER -->
+  <g transform="translate(540,1810)">
+    <rect x="-460" y="-62" width="920" height="124" rx="62" fill="#ffd76a" stroke="#111111" stroke-width="10" filter="url(#shL)"/>
+    <text x="0" y="16" text-anchor="middle" font-size="52" font-weight="900" fill="#111111" letter-spacing="3">🌐 JURAGANKUOTA.ID</text>
+  </g>
+</svg>

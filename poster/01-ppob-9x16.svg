@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920" font-family="'Montserrat', 'Poppins', 'Arial Black', sans-serif">
+  <defs>
+    <filter id="shL" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="16" dy="16" stdDeviation="0" flood-color="#111111"/></filter>
+    <filter id="shM" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="10" dy="10" stdDeviation="0" flood-color="#111111"/></filter>
+    <filter id="shS" x="-12%" y="-12%" width="135%" height="135%"><feDropShadow dx="6" dy="6" stdDeviation="0" flood-color="#111111"/></filter>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="3.5" fill="#ffffff"/></pattern>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1080" height="1920" fill="#0b1e4d"/>
+  <g opacity="0.13"><rect width="1080" height="1920" fill="url(#dots)"/></g>
+  <!-- Diagonal brutalist stripes -->
+  <g opacity="0.10">
+    <rect x="-260" y="1500" width="1700" height="46" fill="#38e8ff" transform="rotate(-14 540 1520)"/>
+    <rect x="-260" y="1600" width="1700" height="46" fill="#38e8ff" transform="rotate(-14 540 1620)"/>
+    <rect x="-260" y="1700" width="1700" height="46" fill="#38e8ff" transform="rotate(-14 540 1720)"/>
+  </g>
+
+  <!-- HEADER WORDMARK -->
+  <g transform="translate(540,118)">
+    <rect x="-360" y="-52" width="720" height="104" rx="52" fill="#ffffff" stroke="#111111" stroke-width="8" filter="url(#shM)"/>
+    <circle cx="-290" cy="0" r="26" fill="#ff4b4b" stroke="#111111" stroke-width="6"/>
+    <text x="-240" y="18" font-size="52" font-weight="900" fill="#111111" letter-spacing="1">JuraganKuota</text>
+  </g>
+
+  <!-- TITLE BADGE -->
+  <g transform="translate(540,300)">
+    <rect x="-460" y="-86" width="920" height="172" rx="26" fill="#ffd76a" stroke="#111111" stroke-width="10" filter="url(#shL)"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="92" font-weight="900" fill="#111111" letter-spacing="1">SEMUA PPOB</text>
+    <text x="0" y="62" text-anchor="middle" font-size="40" font-weight="900" fill="#111111" letter-spacing="2">PULSA • DATA • TOKEN • GAME</text>
+  </g>
+
+  <!-- HERO ILLUSTRATION: phone + product grid -->
+  <g transform="translate(0,520)">
+    <!-- PHONE -->
+    <g transform="translate(150,20)">
+      <rect x="0" y="0" width="560" height="900" rx="52" fill="#ffffff" stroke="#111111" stroke-width="12" filter="url(#shL)"/>
+      <rect x="20" y="20" width="520" height="860" rx="34" fill="#f4f5f7" stroke="#111111" stroke-width="6"/>
+      <rect x="190" y="20" width="180" height="28" rx="14" fill="#111111"/>
+
+      <!-- app header -->
+      <rect x="44" y="82" width="300" height="66" rx="33" fill="#ffffff" stroke="#111111" stroke-width="5"/>
+      <circle cx="80" cy="115" r="14" fill="#ff4b4b" stroke="#111111" stroke-width="4"/>
+      <text x="106" y="124" font-size="24" font-weight="900" fill="#111111">JuraganKuota</text>
+      <rect x="368" y="82" width="152" height="66" rx="33" fill="#0fbf72" stroke="#111111" stroke-width="5"/>
+      <text x="444" y="124" text-anchor="middle" font-size="22" font-weight="900" fill="#111111">Masuk</text>
+
+      <!-- balance strip -->
+      <rect x="44" y="176" width="476" height="96" rx="16" fill="#111111" filter="url(#shS)"/>
+      <text x="70" y="220" font-size="22" font-weight="800" fill="#38e8ff">SALDO KAMU</text>
+      <text x="70" y="256" font-size="38" font-weight="900" fill="#ffffff">Rp 0 — TANPA TOPUP</text>
+
+      <!-- category title -->
+      <text x="46" y="322" font-size="26" font-weight="900" fill="#111111">Pilih Layanan</text>
+
+      <!-- grid of services 2x3 -->
+      <g>
+        <rect x="44" y="344" width="228" height="150" rx="16" fill="#ffd76a" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="158" y="410" text-anchor="middle" font-size="52">📱</text>
+        <text x="158" y="462" text-anchor="middle" font-size="24" font-weight="900" fill="#111111">PULSA</text>
+
+        <rect x="292" y="344" width="228" height="150" rx="16" fill="#38e8ff" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="406" y="410" text-anchor="middle" font-size="52">🌐</text>
+        <text x="406" y="462" text-anchor="middle" font-size="24" font-weight="900" fill="#111111">PAKET DATA</text>
+
+        <rect x="44" y="514" width="228" height="150" rx="16" fill="#ff4b4b" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="158" y="580" text-anchor="middle" font-size="52">⚡</text>
+        <text x="158" y="632" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">TOKEN PLN</text>
+
+        <rect x="292" y="514" width="228" height="150" rx="16" fill="#0fbf72" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="406" y="580" text-anchor="middle" font-size="52">🎮</text>
+        <text x="406" y="632" text-anchor="middle" font-size="24" font-weight="900" fill="#111111">GAME</text>
+
+        <rect x="44" y="684" width="228" height="150" rx="16" fill="#7b5cff" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="158" y="750" text-anchor="middle" font-size="52">💳</text>
+        <text x="158" y="802" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">E-MONEY</text>
+
+        <rect x="292" y="684" width="228" height="150" rx="16" fill="#ffd76a" stroke="#111111" stroke-width="5" filter="url(#shS)"/>
+        <text x="406" y="750" text-anchor="middle" font-size="52">🏦</text>
+        <text x="406" y="802" text-anchor="middle" font-size="24" font-weight="900" fill="#111111">BPJS/PDAM</text>
+      </g>
+    </g>
+
+    <!-- FLOATING STICKERS -->
+    <g transform="translate(905,140) rotate(14)">
+      <rect x="-210" y="-58" width="420" height="116" rx="18" fill="#ff4b4b" stroke="#111111" stroke-width="7" filter="url(#shM)"/>
+      <text x="0" y="16" text-anchor="middle" font-size="40" font-weight="900" fill="#ffffff" stroke="#111111" stroke-width="2" paint-order="stroke">TANPA SALDO</text>
+    </g>
+    <g transform="translate(880,430) rotate(10)">
+      <rect x="-180" y="-56" width="360" height="112" rx="18" fill="#38e8ff" stroke="#111111" stroke-width="7" filter="url(#shM)"/>
+      <text x="0" y="16" text-anchor="middle" font-size="40" font-weight="900" fill="#111111">BAYAR QRIS</text>
+    </g>
+    <g transform="translate(925,720) rotate(10)">
+      <rect x="-190" y="-54" width="380" height="108" rx="18" fill="#0fbf72" stroke="#111111" stroke-width="7" filter="url(#shM)"/>
+      <text x="0" y="16" text-anchor="middle" font-size="36" font-weight="900" fill="#ffffff" stroke="#111111" stroke-width="2" paint-order="stroke">24 JAM OTOMATIS</text>
+    </g>
+  </g>
+
+  <!-- FEATURE STRIP -->
+  <g transform="translate(540,1560)">
+    <rect x="-470" y="-96" width="940" height="192" rx="24" fill="#ffffff" stroke="#111111" stroke-width="9" filter="url(#shL)"/>
+    <g>
+      <circle cx="-380" cy="-38" r="22" fill="#ffd76a" stroke="#111111" stroke-width="5"/>
+      <path d="M-391 -38 l9 9 l18 -18" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-338" y="-26" font-size="36" font-weight="900" fill="#111111">Harga Grosir</text>
+
+      <circle cx="120" cy="-38" r="22" fill="#38e8ff" stroke="#111111" stroke-width="5"/>
+      <path d="M109 -38 l9 9 l18 -18" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="-26" font-size="36" font-weight="900" fill="#111111">Proses Instan</text>
+
+      <circle cx="-380" cy="46" r="22" fill="#0fbf72" stroke="#111111" stroke-width="5"/>
+      <path d="M-391 46 l9 9 l18 -18" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="-338" y="58" font-size="36" font-weight="900" fill="#111111">CS Ramah 24/7</text>
+
+      <circle cx="120" cy="46" r="22" fill="#ff4b4b" stroke="#111111" stroke-width="5"/>
+      <path d="M109 46 l9 9 l18 -18" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="58" font-size="34" font-weight="900" fill="#111111">Aman &amp; Terjamin</text>
+    </g>
+  </g>
+
+  <!-- CTA FOOTER -->
+  <g transform="translate(540,1810)">
+    <rect x="-460" y="-62" width="920" height="124" rx="62" fill="#ffd76a" stroke="#111111" stroke-width="10" filter="url(#shL)"/>
+    <text x="0" y="16" text-anchor="middle" font-size="52" font-weight="900" fill="#111111" letter-spacing="3">🌐 JURAGANKUOTA.ID</text>
+  </g>
+</svg>
